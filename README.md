@@ -9,3 +9,5 @@ Latest preview: **0.3.0-preview.2**. [Download the APK, AAR, core JAR and Maven 
 This is a preview, not a certification of complete React Native feature parity. The named device approval, TikTok, hosted/native import, file-delivery and training paths are implemented; live provider/device/backend acceptance remains required. Discord's official bridge is host-owned, and inherited placeholder web providers are not certified.
 
 No API keys, user tokens or signing keys are included. APK signing fingerprints are in `verification.json`. Register the package/certificate and configure your app before testing. Contact Onairos for production licensing terms; no open-source license is granted for the private implementation.
+
+Next Maven namespace: io.onairos (preview.3 candidate; not yet published). Existing preview.2 coordinates remain com.onairos. [Central setup/status](docs/MAVEN_CENTRAL.md).
