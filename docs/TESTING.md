@@ -34,3 +34,5 @@ Reference: React Native 4.6.0 / e612ce2. SDK binaries: 0.3.0-preview.2. Source i
 - UI: portrait/landscape, keyboard, background/resume, small screen/tablet, large font, TalkBack, system bars, disabled/busy/error states, provider return and comparison against RN 4.6 reference screenshots.
 
 Passing these checks reduces risk; no test suite proves the absence of all runtime defects. Record devices, backend/SDK commits, provider registrations and observed results before stable parity sign-off.
+
+Independent Linux CI passed on private source commit `8a2cd22`: https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39586597739. The workflow builds/tests the same SDK implementation, runs lint and prepares source-free artifacts. Public release binaries retain their original build/checksums and source commit in verification.json.
