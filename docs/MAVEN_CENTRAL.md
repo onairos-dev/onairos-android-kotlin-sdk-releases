@@ -46,3 +46,7 @@ dependencies {
 ```
 
 Official guidance: [namespace verification](https://central.sonatype.org/register/namespace/), [requirements](https://central.sonatype.org/publish/requirements/), [closed-source artifacts](https://central.sonatype.org/faq/closed-source/), [publisher API](https://central.sonatype.org/publish/publish-portal-api/).
+
+Consumer prerequisite: set `android.useAndroidX=true` in the host app's `gradle.properties`. The SDK requires Java 17 and Android API 28+.
+
+Prepare-only verification passed at private source commit `d2157d56bca3a282c09afb75636a11392489984f`: [workflow run](https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39619371939). Namespace verification and publication remain pending account access.

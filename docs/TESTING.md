@@ -36,3 +36,9 @@ Reference: React Native 4.6.0 / e612ce2. SDK binaries: 0.3.0-preview.2. Source i
 Passing these checks reduces risk; no test suite proves the absence of all runtime defects. Record devices, backend/SDK commits, provider registrations and observed results before stable parity sign-off.
 
 Independent Linux CI passed on private source commit `8a2cd22`: https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39586597739. The workflow builds/tests the same SDK implementation, runs lint and prepares source-free artifacts. Public release binaries retain their original build/checksums and source commit in verification.json.
+
+## io.onairos preview.3 candidate verification
+
+Private source commit `d2157d56bca3a282c09afb75636a11392489984f` passed [Android SDK CI](https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39619019937) and the new [Central preparation workflow](https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39619371939). This includes 30 core tests, 9 Android lifecycle/layout/rendering cases, 5 shared-script tests, 12 publication/DNS guards, lint and builds. Windows security blocked the native Robolectric rendering DLL locally; the full test passed in Linux CI without disabling protection. A separate local Android consumer built using only the prepared io.onairos Maven binaries and transitive dependencies.
+
+No Central namespace verification, DNS write, signed upload, publication or live-device/provider acceptance is claimed by these prepare-only results. Public preview.2 artifacts remain unchanged.
