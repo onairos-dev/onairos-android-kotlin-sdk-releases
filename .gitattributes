@@ -1,0 +1,6 @@
+* text=auto eol=lf
+maven/** -text
+*.jar binary
+*.aar binary
+*.apk binary
+*.zip binary
