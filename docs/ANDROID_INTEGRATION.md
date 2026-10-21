@@ -1,6 +1,6 @@
 # Install and test the Android Kotlin preview
 
-Version: `0.3.0-preview.1`. Implementation source is private. Download the demo APK and Maven binary bundle from [GitHub Releases](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases).
+Version: `0.3.0-preview.2`. Implementation source is private. Download the demo APK and Maven binary bundle from [GitHub Releases](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases).
 
 The core library is `com.onairos:onairos-kotlin`; the Android library is `com.onairos:onairos-android`. The Android library includes the core transitively. Use Java/Kotlin target 17 and Android API 28+ for the private import UI.
 
@@ -16,7 +16,7 @@ repositories {
     }
 }
 dependencies {
-    implementation("com.onairos:onairos-android:0.3.0-preview.1")
+    implementation("com.onairos:onairos-android:0.3.0-preview.2")
 }
 ```
 
@@ -63,3 +63,19 @@ Instagram, Spotify, Netflix, Sephora, Telegram and Hinge use the shared referenc
 The preview is built and protocol-tested, but no real-device/provider matrix was executed during preparation. The backend checkout used for development lacks the newer native-provider routes and the 4.6 device-approval PKCE/grant contract. Deploy the matching backend before claiming end-to-end support. Provider credentials, native bridge registration, API entitlement, website availability, worker health and consent remain server/provider-controlled.
 
 The preview does not claim pixel-identical React Native UI or a newly certified production PIN/proof UI. It does not implement the reference's mock `encryptModelKey` string as real encryption. Keep source and signing keys private. Contact Onairos for production licensing terms.
+
+## Preview 2: owner sessions and guided UI
+
+Open **Guided onboarding** after saving configuration in diagnostics. It uses fresh owner Google or owner email-code authentication for account operations, establishes a rotating device session, connects sources, configures/unlocks a secret code and requests training after explicit consent. The separate standard SDK login stays developer-app scoped. Never use a grant token as an owner session.
+
+`MobileSessionManager` requires host-owned encrypted atomic `MobileSessionStorage`. Keep one manager per account. It serializes rotation, persists a pending replacement secret before network I/O and retries exactly that pair after a lost response/restart. It never retries a failed application mutation automatically. Clear account-specific cached results and pending callbacks on sign-out/account change. The demo's PIN unlock capability stays in memory; rotation/process death can require unlocking again.
+
+Backend source dev already contains native OAuth, cross-app approval and mobile-session APIs. Preview 2's new `/account-security/persona-setup` endpoint and revocation-aware approval hardening are on the accompanying backend feature branch; deploy the reviewed backend changes to your test environment. No deployment is implied by this release.
+
+The guided Android UI uses the RN 4.6 fonts and visual tokens but is not a complete pixel-identical port. Native topic/chat selection uses Android dialogs. RN logo/Lottie/shimmer/teaser animations, avatars, presentation overrides and passkey management screens are not duplicated. Discord needs a host-supplied official adapter; Hinge inherits an unsupported web placeholder. Apple login needs a host-supplied identity token. Provider-owned login screens and server-owned hosted viewer UI cannot be restyled by this SDK. Exact visual parity and live-provider acceptance remain open.
+
+For real-device testing, enable USB debugging on Android 9+, accept this computer's debugging authorization, update WebView/Chrome, and use synthetic/test provider accounts. Register the APK certificate and redirect URIs. The test checklist covers cold/warm launches, rotation, process death, background/resume, offline/slow network, expired/revoked JWT, refresh concurrency, account switching, consent denial, retries, import cancellation, cache/cookie isolation, training completion and file capability expiry. Do not use production accounts or place secrets in logs.
+
+Optional biometric PIN custody uses a strong Android biometric prompt for each cryptographic operation. Code storage is opt-in after server verification; sign-out/account switching deletes it. Enrollment/key invalidation fails closed to manual code entry. Hardware acceptance is pending.
+
+Backend review: https://github.com/zd819/TempBackend/pull/726 (targets dev; not deployed). This also implements the legacy catalog status URLs and corrects legacy disconnect URLs. Use an updated catalog from the reviewed backend. Identity-only connections are excluded from the demo training-source selection.

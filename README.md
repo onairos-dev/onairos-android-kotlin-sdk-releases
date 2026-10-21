@@ -2,7 +2,7 @@
 
 Implementation source stays private. This repository contains public binaries, Maven metadata and integration documentation only.
 
-Latest preview: **0.3.0-preview.1**. [Download the APK, AAR, core JAR and Maven bundle](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases/tag/v0.3.0-preview.1).
+Latest preview: **0.3.0-preview.2**. [Download the APK, AAR, core JAR and Maven bundle](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases/tag/v0.3.0-preview.2).
 
 [Android setup and demo testing](docs/ANDROID_INTEGRATION.md) · [Public distribution steps](docs/DISTRIBUTION.md)
 

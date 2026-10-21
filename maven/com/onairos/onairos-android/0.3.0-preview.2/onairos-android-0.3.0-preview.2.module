@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.onairos",
+    "module": "onairos-android",
+    "version": "0.3.0-preview.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.onairos",
+          "module": "onairos-kotlin",
+          "version": {
+            "requires": "0.3.0-preview.2"
+          }
+        },
+        {
+          "group": "androidx.biometric",
+          "module": "biometric",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "onairos-android-0.3.0-preview.2.aar",
+          "url": "onairos-android-0.3.0-preview.2.aar",
+          "size": 321982,
+          "sha512": "634c2136dc2e6eaa2ef3850e15cec1336a070d88fe52e71afe499c355e09403f4609e1dd05e51f1e78a8f472cc2d7cd55ce0070b7a4ea3a21e0e2f96e818d345",
+          "sha256": "fcb54af209e977add9b27d19a5f0b8cb5db1df4cac145d1ce9dfdf6af6863cbb",
+          "sha1": "50617d9ce7da0ea0e87b6d51bb81919658e70fda",
+          "md5": "2d06402aac1897c18015b4315b841c3f"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.activity",
+          "module": "activity-ktx",
+          "version": {
+            "requires": "1.10.1"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.8.7"
+          }
+        },
+        {
+          "group": "androidx.webkit",
+          "module": "webkit",
+          "version": {
+            "requires": "1.12.1"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.12.0"
+          }
+        },
+        {
+          "group": "com.tiktok.open.sdk",
+          "module": "tiktok-open-sdk-auth",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "com.tiktok.open.sdk",
+          "module": "tiktok-open-sdk-core",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "com.onairos",
+          "module": "onairos-kotlin",
+          "version": {
+            "requires": "0.3.0-preview.2"
+          }
+        },
+        {
+          "group": "androidx.biometric",
+          "module": "biometric",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "onairos-android-0.3.0-preview.2.aar",
+          "url": "onairos-android-0.3.0-preview.2.aar",
+          "size": 321982,
+          "sha512": "634c2136dc2e6eaa2ef3850e15cec1336a070d88fe52e71afe499c355e09403f4609e1dd05e51f1e78a8f472cc2d7cd55ce0070b7a4ea3a21e0e2f96e818d345",
+          "sha256": "fcb54af209e977add9b27d19a5f0b8cb5db1df4cac145d1ce9dfdf6af6863cbb",
+          "sha1": "50617d9ce7da0ea0e87b6d51bb81919658e70fda",
+          "md5": "2d06402aac1897c18015b4315b841c3f"
+        }
+      ]
+    }
+  ]
+}

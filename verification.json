@@ -1,12 +1,17 @@
 {
-  "version": "0.3.0-preview.1",
-  "sdkTests": 24,
+  "version": "0.3.0-preview.2",
+  "sdkTests": 30,
   "scriptTests": 5,
   "lintErrors": 0,
   "sourceVisibility": "private",
-  "sdkSourceCommit": "652341c190a1b8f6ac153d216edc58395d49bf6a",
+  "sdkSourceCommit": "2f4c87c5e811d7bd69b49685e4f0c4feb3c359db",
   "reference": "@onairos/react-native@4.6.0 / e612ce2",
   "liveDeviceTests": "not run; no device attached",
+  "androidRuntimeTests": 9,
+  "androidRuntimeApis": [
+    28,
+    35
+  ],
   "packageName": "com.onairos.demo",
   "debugSha1": "25:09:72:82:A2:11:68:89:81:35:9C:67:E0:05:94:D1:FC:03:2F:B8",
   "debugCertificateSha256": "f5a6cc5796fcbaf35894d6cf3159a3e8db1e329f87e5d524d0e7238248825091",
@@ -19,7 +24,8 @@
   "notCertified": [
     "host-supplied Discord bridge",
     "inherited Hinge web placeholder",
-    "production PIN/proof UI",
-    "pixel-identical RN UI"
+    "hardware biometric acceptance and passkey management UI",
+    "pixel-identical RN UI and animations",
+    "live provider acceptance"
   ]
 }
