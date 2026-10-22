@@ -1,6 +1,6 @@
 # io.onairos Maven Central publishing
 
-The next candidate is `0.4.0-preview.2`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. This candidate is not yet on Central and does not imply backend/provider/device acceptance.
+The documented preview is `0.4.0-preview.2`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. The signed upload passed Portal validation on 2026-10-21; final Publish is still required for Central availability. The public version-pinned GitHub Maven repository is available. Publication does not imply backend/provider/device acceptance.
 
 ## One-time account setup
 
@@ -50,3 +50,19 @@ Official guidance: [namespace verification](https://central.sonatype.org/registe
 Consumer prerequisite: set `android.useAndroidX=true` in the host app's `gradle.properties`. The SDK requires Java 17 and Android API 28+.
 
 Prepare-only verification passed at private source commit `d2157d56bca3a282c09afb75636a11392489984f`: [workflow run](https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39619371939). Namespace verification and publication remain pending account access.
+
+## Repeat this for every SDK update
+
+1. Make the change in the private development repository on `dev` or a feature branch, keeping implementation source private.
+2. Choose a new immutable version. Keep both Gradle module versions, the Android-to-core dependency, SDK version headers, demo version, Central helper defaults and workflow bundle names aligned. Do not rebuild an existing public version with different contents.
+3. Run the Android SDK checks and applicable real-device/provider regression checks. Build/audit the public APK, AAR, core JAR and Maven repository bundle; refresh checksums and verification metadata.
+4. Publish the matching binary-only GitHub release and versioned public Maven directory. Preserve existing releases.
+5. Run **Maven Central preparation and validation** from the private repository, branch `dev`, mode `upload-for-validation`. It builds/tests/signs and uploads with USER_MANAGED; it does not complete Portal publication.
+6. In Central, inspect the deployment, wait for **Validated**, then click **Publish**. Wait for **Published** and verify a clean consumer resolves the new coordinates using `mavenCentral()`.
+7. Update the public release README/integration guide, docs.onairos.io Kotlin guide and Quick Setup prompt, downloadable skill/ZIP/agent indexes, and developer portal Kotlin channel to the same public version. Include migration notes and outstanding acceptance limits.
+8. Notify affected SDK owners when contracts change. Keep test evidence separate from publish/deployment status.
+
+The verified namespace, Central token and GPG signing key are one-time setup. Reuse the five private Actions secrets; replace a token/key only for expiry, revocation or deliberate rotation. No publisher secrets belong in the public release repository or documentation.
+
+Share the developer entry point: https://docs.onairos.io/kotlin-integration/
+Download the setup skill: https://docs.onairos.io/skills/onairos-kotlin.zip
