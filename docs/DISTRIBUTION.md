@@ -20,9 +20,9 @@ The private CI builds and checks source. Public-release publishing requires a na
 
 ## Maven Central
 
-The current group is **io.onairos**, verified through onairos.io. The documented preview is **0.4.0-preview.1**. Earlier com.onairos preview coordinates remain immutable. Central and GPG publishing credentials are configured in the private source repository's Actions secrets; SDK implementation source remains private.
+The current group is **io.onairos**, verified through onairos.io. The documented preview is **0.4.0-preview.2**. Earlier com.onairos preview coordinates remain immutable. Central and GPG publishing credentials are configured in the private source repository's Actions secrets; SDK implementation source remains private.
 
-The signed upload passed Portal validation on 2026-10-21. Complete **Publish** in Central before advertising Central availability, then verify a clean Android consumer. The version-pinned public GitHub Maven repository works while Central publication is pending.
+The earlier 0.4.0-preview.1 signed upload passed Portal validation on 2026-10-21. The 0.4.0-preview.2 GitHub release requires its own matching Central upload. Complete **Publish** in Central before advertising Central availability, then verify a clean Android consumer. The version-pinned public GitHub Maven repository works while Central publication is pending.
 
 Use [MAVEN_CENTRAL.md](MAVEN_CENTRAL.md) for namespace/signing details, the GitHub workflow, final Portal publication and the repeatable process for every SDK update. Every update requires a new version, tests, binary/source audit, signed upload, explicit publication, public release and matching docs/skill metadata. A build or upload is not evidence of provider/device acceptance.
 
@@ -31,6 +31,6 @@ Use [MAVEN_CENTRAL.md](MAVEN_CENTRAL.md) for namespace/signing details, the GitH
 - Setup and package instructions: https://docs.onairos.io/kotlin-integration/
 - AI setup skill ZIP: https://docs.onairos.io/skills/onairos-kotlin.zip
 - AI guide: https://docs.onairos.io/kotlin/llm.txt
-- Release downloads: https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases/tag/v0.4.0-preview.1
+- Release downloads: https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases/tag/v0.4.0-preview.2
 
-Maven coordinates: `io.onairos:onairos-android:0.4.0-preview.1`, with the matching core included transitively. Use Gradle repository metadata rather than adding a standalone AAR without its dependencies.
+Maven coordinates: `io.onairos:onairos-android:0.4.0-preview.2`, with the matching core included transitively. Use Gradle repository metadata rather than adding a standalone AAR without its dependencies.
