@@ -1,3 +1,9 @@
+## 0.4.0-preview.2 — Personality and preference availability
+
+Insufficient personality data and insufficient preference data both complete without blocking. `dataErrors` identifies the affected requested categories; backend counts/details remain in the response. Standard personality requests below 5 data points and allowlisted requests below 3 use this behavior without changing server thresholds.
+
+Validated source commit: `d79dd731e6a78d4fd62404df30a487c1c6d90b23`. Kotlin tests, Android runtime tests, shared scripts, builds and lint passed. Physical-device/provider tests and Maven Central publication remain outside this preview release.
+
 ## 0.4.0-preview.1 — Nonblocking insufficient data
 
 Insufficient model data now returns a structured developer result from handoff, training and result APIs. Polling stops without a warning screen; authentication and authorization failures still throw. The native flow remains host-controlled.

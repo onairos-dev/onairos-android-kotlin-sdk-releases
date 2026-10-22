@@ -1,10 +1,10 @@
 {
-  "version": "0.4.0-preview.1",
-  "sdkTests": 33,
+  "version": "0.4.0-preview.2",
+  "sdkTests": 34,
   "scriptTests": 5,
   "lintErrors": 0,
   "sourceVisibility": "private",
-  "sdkSourceCommit": "7f9a52678d3ef6ab5be573169b24632690ed5b32",
+  "sdkSourceCommit": "d79dd731e6a78d4fd62404df30a487c1c6d90b23",
   "reference": "@onairos/react-native@4.6.0 / e612ce2",
   "liveDeviceTests": "not run; no device attached",
   "androidRuntimeTests": 9,
@@ -13,9 +13,9 @@
     35
   ],
   "packageName": "com.onairos.demo",
-  "debugSha1": "60:3B:33:A6:B6:3F:4B:A1:4B:4D:3A:AC:FD:88:72:5D:95:32:10:C5",
-  "debugCertificateSha256": "e9ff7c56b2d701ad140417dab5c27a5f06208ca677e0fb53bfc889314312499a",
-  "debugCertificateMd5": "00846db2c60a04e0cdf43490cd069fe0",
+  "debugSha1": "66:C4:48:F8:DA:62:6B:FF:35:9C:73:AC:70:04:28:7B:AA:93:45:CD",
+  "debugCertificateSha256": "8c02c947a4c579e555743130317088deaa55d11dc91e5c17180087b65a4ba002",
+  "debugCertificateMd5": "dcbc683ea1d0fb6dfff752c5e7f47034",
   "backendPrerequisites": [
     "device approval PKCE/grant exchange",
     "native provider config/start/complete",

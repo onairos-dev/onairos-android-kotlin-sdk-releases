@@ -1,6 +1,6 @@
 # io.onairos Maven Central publishing
 
-The next candidate is `0.4.0-preview.1`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. This candidate is not yet on Central and does not imply backend/provider/device acceptance.
+The next candidate is `0.4.0-preview.2`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. This candidate is not yet on Central and does not imply backend/provider/device acceptance.
 
 ## One-time account setup
 
@@ -25,8 +25,8 @@ For a local build, run the normal SDK build/publish tasks, then:
 python -m unittest discover -s scripts -p 'test_central*.py'
 python scripts/central-publish.py prepare
 # With a configured/imported private signing key and environment secrets:
-python scripts/central-publish.py prepare --sign --output output/central-0.4.0-preview.1-signed.zip
-python scripts/central-publish.py upload --bundle output/central-0.4.0-preview.1-signed.zip
+python scripts/central-publish.py prepare --sign --output output/central-0.4.0-preview.2-signed.zip
+python scripts/central-publish.py upload --bundle output/central-0.4.0-preview.2-signed.zip
 python scripts/central-publish.py status --deployment-id DEPLOYMENT_ID
 ```
 
@@ -41,7 +41,7 @@ repositories {
     maven("https://artifact.bytedance.com/repository/AwemeOpenSDK")
 }
 dependencies {
-    implementation("io.onairos:onairos-android:0.4.0-preview.1")
+    implementation("io.onairos:onairos-android:0.4.0-preview.2")
 }
 ```
 
