@@ -22,7 +22,7 @@ The private CI builds and checks source. Public-release publishing requires a na
 
 The current group is **io.onairos**, verified through onairos.io. The documented preview is **0.4.0-preview.2**. Earlier com.onairos preview coordinates remain immutable. Central and GPG publishing credentials are configured in the private source repository's Actions secrets; SDK implementation source remains private.
 
-The earlier 0.4.0-preview.1 signed upload passed Portal validation on 2026-10-21. The 0.4.0-preview.2 GitHub release requires its own matching Central upload. Complete **Publish** in Central before advertising Central availability, then verify a clean Android consumer. The version-pinned public GitHub Maven repository works while Central publication is pending.
+Version **0.4.0-preview.2 is PUBLISHED on Maven Central**, verified on 2026-10-21. A clean Gradle consumer resolved Android/core and transitive dependencies using Central for io.onairos, with no GitHub fallback; the SDK binaries matched the signed upload. The pinned GitHub Maven repository remains an optional backup. Each future version requires its own signed upload, final publication and consumer verification.
 
 Use [MAVEN_CENTRAL.md](MAVEN_CENTRAL.md) for namespace/signing details, the GitHub workflow, final Portal publication and the repeatable process for every SDK update. Every update requires a new version, tests, binary/source audit, signed upload, explicit publication, public release and matching docs/skill metadata. A build or upload is not evidence of provider/device acceptance.
 

@@ -1,6 +1,6 @@
 # io.onairos Maven Central publishing
 
-The documented preview is `0.4.0-preview.2`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. The earlier 0.4.0-preview.1 signed upload passed Portal validation on 2026-10-21; final Publish is still required for that version. This 0.4.0-preview.2 GitHub release requires its own matching Central upload and publication. The public version-pinned GitHub Maven repository is available. Publication does not imply backend/provider/device acceptance.
+The documented preview is `0.4.0-preview.2`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. Version 0.4.0-preview.2 was published on Maven Central on 2026-10-21 after signed validation. A clean Gradle consumer resolved both modules and transitive dependencies, and the downloaded SDK binaries matched the signed upload. The public version-pinned GitHub Maven repository is available. Publication does not imply backend/provider/device acceptance.
 
 ## One-time account setup
 
@@ -49,7 +49,7 @@ Official guidance: [namespace verification](https://central.sonatype.org/registe
 
 Consumer prerequisite: set `android.useAndroidX=true` in the host app's `gradle.properties`. The SDK requires Java 17 and Android API 28+.
 
-Prepare-only verification passed at private source commit `d2157d56bca3a282c09afb75636a11392489984f`: [workflow run](https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39619371939). Namespace verification, Central token and GPG setup are complete. The 0.4.0-preview.1 upload is validated; final publication is still pending. Run upload-for-validation for a newer version before publishing it.
+Prepare-only verification passed at private source commit `d2157d56bca3a282c09afb75636a11392489984f`: [workflow run](https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39619371939). Namespace verification, Central token and GPG setup are complete. The earlier 0.4.0-preview.1 upload remains separate; 0.4.0-preview.2 is now PUBLISHED. Signed build/upload: https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39731934344 . Clean Central consumer: https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39733123326 . Run upload-for-validation and final publication for each newer version.
 
 ## Repeat this for every SDK update
 
