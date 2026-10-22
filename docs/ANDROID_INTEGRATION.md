@@ -1,8 +1,8 @@
 # Install and test the Android Kotlin preview
 
-Version: `0.3.0-preview.2`. Implementation source is private. Download the demo APK and Maven binary bundle from [GitHub Releases](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases).
+Version: `0.4.0-preview.1`. Implementation source is private. Download the demo APK and Maven binary bundle from [GitHub Releases](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases).
 
-The core library is `com.onairos:onairos-kotlin`; the Android library is `com.onairos:onairos-android`. The Android library includes the core transitively. Use Java/Kotlin target 17 and Android API 28+ for the private import UI.
+The core library is `io.onairos:onairos-kotlin`; the Android library is `io.onairos:onairos-android`. The Android library includes the core transitively. Use Java/Kotlin target 17 and Android API 28+ for the private import UI.
 
 ```kotlin
 repositories {
@@ -12,11 +12,11 @@ repositories {
         content { includeGroup("com.tiktok.open.sdk") }
     }
     maven("https://raw.githubusercontent.com/onairos-dev/onairos-android-kotlin-sdk-releases/dev/maven") {
-        content { includeGroup("com.onairos") }
+        content { includeGroup("io.onairos") }
     }
 }
 dependencies {
-    implementation("com.onairos:onairos-android:0.3.0-preview.2")
+    implementation("io.onairos:onairos-android:0.4.0-preview.1")
 }
 ```
 

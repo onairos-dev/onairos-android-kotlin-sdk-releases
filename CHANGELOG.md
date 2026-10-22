@@ -1,3 +1,9 @@
+## 0.4.0-preview.1 — Nonblocking insufficient data
+
+Insufficient model data now returns a structured developer result from handoff, training and result APIs. Polling stops without a warning screen; authentication and authorization failures still throw. The native flow remains host-controlled.
+
+Validated by private source CI at commit `7f9a52678d3ef6ab5be573169b24632690ed5b32`: 33 Kotlin tests, 5 shared-script tests, 9 Android runtime tests, Android builds and lint. No physical-device/provider acceptance was run. Maven Central publication remains pending its existing account setup; this preview is available through the GitHub binary repository.
+
 # Changelog
 
 ## 0.3.0-preview.2

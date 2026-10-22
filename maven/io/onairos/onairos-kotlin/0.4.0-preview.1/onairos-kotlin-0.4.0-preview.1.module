@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.onairos",
+    "module": "onairos-kotlin",
+    "version": "0.4.0-preview.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.10.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.8.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "onairos-kotlin-0.4.0-preview.1.jar",
+          "url": "onairos-kotlin-0.4.0-preview.1.jar",
+          "size": 190340,
+          "sha512": "99968750badacaa0c61f356d5b6a8753fdc7ade0c96725d8d492030a28bd5eb990456aa12db891c0320dd7073c900aeda3f4c2724751f6b55768784daaba2227",
+          "sha256": "f21b63f48e6f9b203f94e8bff013c6ab35de6ef1b7fb4bc9d098700cb171ad26",
+          "sha1": "3972f045c9bad92f2c9b4d9b55d68e4e0de12b73",
+          "md5": "822b91f90b44084f1547bf005b50bc0c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.12.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.10.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.8.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "onairos-kotlin-0.4.0-preview.1.jar",
+          "url": "onairos-kotlin-0.4.0-preview.1.jar",
+          "size": 190340,
+          "sha512": "99968750badacaa0c61f356d5b6a8753fdc7ade0c96725d8d492030a28bd5eb990456aa12db891c0320dd7073c900aeda3f4c2724751f6b55768784daaba2227",
+          "sha256": "f21b63f48e6f9b203f94e8bff013c6ab35de6ef1b7fb4bc9d098700cb171ad26",
+          "sha1": "3972f045c9bad92f2c9b4d9b55d68e4e0de12b73",
+          "md5": "822b91f90b44084f1547bf005b50bc0c"
+        }
+      ]
+    }
+  ]
+}
