@@ -1,6 +1,6 @@
 # io.onairos Maven Central publishing
 
-The documented preview is `0.4.0-preview.2`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. Version 0.4.0-preview.2 was published on Maven Central on 2026-10-21 after signed validation. A clean Gradle consumer resolved both modules and transitive dependencies, and the downloaded SDK binaries matched the signed upload. The public version-pinned GitHub Maven repository is available. Publication does not imply backend/provider/device acceptance.
+The documented preview is `0.4.0-preview.3`, under `io.onairos:onairos-kotlin` and `io.onairos:onairos-android`. Kotlin package names remain `com.onairos.sdk`; existing `com.onairos` preview 2 binaries remain immutable. Version 0.4.0-preview.3 was published on Maven Central on 2026-10-22 after signed validation. A clean Gradle consumer resolved both modules and transitive dependencies, and the downloaded SDK binaries matched the signed upload. The public version-pinned GitHub Maven repository is available. Publication does not imply backend/provider/device acceptance.
 
 ## One-time account setup
 
@@ -25,8 +25,8 @@ For a local build, run the normal SDK build/publish tasks, then:
 python -m unittest discover -s scripts -p 'test_central*.py'
 python scripts/central-publish.py prepare
 # With a configured/imported private signing key and environment secrets:
-python scripts/central-publish.py prepare --sign --output output/central-0.4.0-preview.2-signed.zip
-python scripts/central-publish.py upload --bundle output/central-0.4.0-preview.2-signed.zip
+python scripts/central-publish.py prepare --sign --output output/central-0.4.0-preview.3-signed.zip
+python scripts/central-publish.py upload --bundle output/central-0.4.0-preview.3-signed.zip
 python scripts/central-publish.py status --deployment-id DEPLOYMENT_ID
 ```
 
@@ -41,7 +41,7 @@ repositories {
     maven("https://artifact.bytedance.com/repository/AwemeOpenSDK")
 }
 dependencies {
-    implementation("io.onairos:onairos-android:0.4.0-preview.2")
+    implementation("io.onairos:onairos-android:0.4.0-preview.3")
 }
 ```
 
@@ -66,3 +66,7 @@ The verified namespace, Central token and GPG signing key are one-time setup. Re
 
 Share the developer entry point: https://docs.onairos.io/kotlin-integration/
 Download the setup skill: https://docs.onairos.io/skills/onairos-kotlin.zip
+
+## Preview.3 publication evidence
+
+Release source: `1d8243511e600b9447c41770629d87eb2a114d72`. Signed build/tests/lint/upload: https://github.com/onairos-dev/onairos-android-kotlin-sdk/actions/runs/39884992026 . Central deployment: `3b34ea9d-0764-40be-ac79-e824ad87f741`. All ten publication signatures verified against the configured release key. Public download/consumer evidence is recorded with the release.

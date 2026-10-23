@@ -1,3 +1,9 @@
+## 0.4.0-preview.3 - Guided connectors and Smart Filter
+
+Release Anushka's connector/Smart Filter update from private dev 8b0edae30e7b00d7a0698a45999eb007ed037857, version-aligned at 1d8243511e600b9447c41770629d87eb2a114d72. Includes guided native dialog flow, provider-specific routing, refreshed owner-session import handling, title-first ChatGPT/Claude selection, selected-content persistence progress and current sign-in/revocation state. Instagram, Telegram and other paused/unsupported providers remain hidden.
+
+Release CI passed Kotlin protocol, Android library, demo/UI, shared-script tests, builds, lint and publication guards. Public binaries match the signed Central upload. Backend/provider configuration, physical-device acceptance and remaining presentation differences are separate gates; the preview does not certify full RN pixel parity.
+
 ## 0.4.0-preview.2 — Personality and preference availability
 
 Insufficient personality data and insufficient preference data both complete without blocking. `dataErrors` identifies the affected requested categories; backend counts/details remain in the response. Standard personality requests below 5 data points and allowlisted requests below 3 use this behavior without changing server thresholds.

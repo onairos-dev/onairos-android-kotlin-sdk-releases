@@ -1,6 +1,6 @@
 # Install and test the Android Kotlin preview
 
-Version: `0.4.0-preview.2`. Implementation source is private. Download the demo APK and Maven binary bundle from [GitHub Releases](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases).
+Version: `0.4.0-preview.3`. Implementation source is private. Download the demo APK and Maven binary bundle from [GitHub Releases](https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases).
 
 The core library is `io.onairos:onairos-kotlin`; the Android library is `io.onairos:onairos-android`. The Android library includes the core transitively. Use Java/Kotlin target 17 and Android API 28+ for the private import UI.
 
@@ -11,16 +11,16 @@ repositories {
     maven("https://artifact.bytedance.com/repository/AwemeOpenSDK") {
         content { includeGroup("com.tiktok.open.sdk") }
     }
-    maven("https://raw.githubusercontent.com/onairos-dev/onairos-android-kotlin-sdk-releases/dev/maven") {
+    maven("https://raw.githubusercontent.com/onairos-dev/onairos-android-kotlin-sdk-releases/v0.4.0-preview.3/maven") {
         content { includeGroup("io.onairos") }
     }
 }
 dependencies {
-    implementation("io.onairos:onairos-android:0.4.0-preview.2")
+    implementation("io.onairos:onairos-android:0.4.0-preview.3")
 }
 ```
 
-These preview coordinates are hosted in the public GitHub Maven directory, not Maven Central. The downloadable Maven ZIP can also be extracted and used with a local `maven { url = uri("/path/to/maven") }` repository. Include transitive dependencies through Gradle; the standalone JAR/AAR is not a fat library.
+This version is published on Maven Central. The pinned GitHub Maven repository is an optional backup. The downloadable Maven ZIP can also be extracted and used with a local `maven { url = uri("/path/to/maven") }` repository. Include transitive dependencies through Gradle; the standalone JAR/AAR is not a fat library.
 
 ## Demo registration
 
@@ -79,3 +79,7 @@ For real-device testing, enable USB debugging on Android 9+, accept this compute
 Optional biometric PIN custody uses a strong Android biometric prompt for each cryptographic operation. Code storage is opt-in after server verification; sign-out/account switching deletes it. Enrollment/key invalidation fails closed to manual code entry. Hardware acceptance is pending.
 
 Backend review: https://github.com/zd819/TempBackend/pull/726 (targets dev; not deployed). This also implements the legacy catalog status URLs and corrects legacy disconnect URLs. Use an updated catalog from the reviewed backend. Identity-only connections are excluded from the demo training-source selection.
+
+## Preview.3 connector and Smart Filter update
+
+Includes Anushka's guided native connector UI, provider-specific routing, refreshed owner-session import handling and title-first ChatGPT/Claude Smart Filter with explicit selection, per-chat persistence progress and cancellation handling. Instagram, Telegram and other paused/unsupported providers remain hidden in the guided catalog. Opening a provider page does not count as a completed connection. Backend configuration and physical-device/provider acceptance remain required.

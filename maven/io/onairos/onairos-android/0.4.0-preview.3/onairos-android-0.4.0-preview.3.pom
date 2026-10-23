@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.onairos</groupId>
+  <artifactId>onairos-android</artifactId>
+  <version>0.4.0-preview.3</version>
+  <packaging>aar</packaging>
+  <name>Onairos Android SDK</name>
+  <description>Onairos account authorization, connectors and training for native Android applications</description>
+  <url>https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases</url>
+  <licenses>
+    <license>
+      <name>Proprietary; separate agreement required</name>
+      <url>https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/blob/dev/docs/LICENSE_NOTICE.md</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>onairos</id>
+      <name>Onairos</name>
+      <email>developer@onairos.io</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:https://github.com/onairos-dev/onairos-android-kotlin-sdk.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/onairos-dev/onairos-android-kotlin-sdk.git</developerConnection>
+    <url>https://github.com/onairos-dev/onairos-android-kotlin-sdk</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>io.onairos</groupId>
+      <artifactId>onairos-kotlin</artifactId>
+      <version>0.4.0-preview.3</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.biometric</groupId>
+      <artifactId>biometric</artifactId>
+      <version>1.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>2.1.20</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.airbnb.android</groupId>
+      <artifactId>lottie</artifactId>
+      <version>6.7.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.activity</groupId>
+      <artifactId>activity-ktx</artifactId>
+      <version>1.10.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.lifecycle</groupId>
+      <artifactId>lifecycle-runtime-ktx</artifactId>
+      <version>2.8.7</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.webkit</groupId>
+      <artifactId>webkit</artifactId>
+      <version>1.12.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>4.12.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.tiktok.open.sdk</groupId>
+      <artifactId>tiktok-open-sdk-auth</artifactId>
+      <version>2.2.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.tiktok.open.sdk</groupId>
+      <artifactId>tiktok-open-sdk-core</artifactId>
+      <version>2.2.0</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>

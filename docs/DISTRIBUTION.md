@@ -20,9 +20,9 @@ The private CI builds and checks source. Public-release publishing requires a na
 
 ## Maven Central
 
-The current group is **io.onairos**, verified through onairos.io. The documented preview is **0.4.0-preview.2**. Earlier com.onairos preview coordinates remain immutable. Central and GPG publishing credentials are configured in the private source repository's Actions secrets; SDK implementation source remains private.
+The current group is **io.onairos**, verified through onairos.io. The documented preview is **0.4.0-preview.3**. Earlier com.onairos preview coordinates remain immutable. Central and GPG publishing credentials are configured in the private source repository's Actions secrets; SDK implementation source remains private.
 
-Version **0.4.0-preview.2 is PUBLISHED on Maven Central**, verified on 2026-10-21. A clean Gradle consumer resolved Android/core and transitive dependencies using Central for io.onairos, with no GitHub fallback; the SDK binaries matched the signed upload. The pinned GitHub Maven repository remains an optional backup. Each future version requires its own signed upload, final publication and consumer verification.
+Version **0.4.0-preview.3 is PUBLISHED on Maven Central**, verified on 2026-10-22. A clean Gradle consumer resolved Android/core and transitive dependencies using Central for io.onairos, with no GitHub fallback; the SDK binaries matched the signed upload. The pinned GitHub Maven repository remains an optional backup. Each future version requires its own signed upload, final publication and consumer verification.
 
 Use [MAVEN_CENTRAL.md](MAVEN_CENTRAL.md) for namespace/signing details, the GitHub workflow, final Portal publication and the repeatable process for every SDK update. Every update requires a new version, tests, binary/source audit, signed upload, explicit publication, public release and matching docs/skill metadata. A build or upload is not evidence of provider/device acceptance.
 
@@ -31,6 +31,6 @@ Use [MAVEN_CENTRAL.md](MAVEN_CENTRAL.md) for namespace/signing details, the GitH
 - Setup and package instructions: https://docs.onairos.io/kotlin-integration/
 - AI setup skill ZIP: https://docs.onairos.io/skills/onairos-kotlin.zip
 - AI guide: https://docs.onairos.io/kotlin/llm.txt
-- Release downloads: https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases/tag/v0.4.0-preview.2
+- Release downloads: https://github.com/onairos-dev/onairos-android-kotlin-sdk-releases/releases/tag/v0.4.0-preview.3
 
-Maven coordinates: `io.onairos:onairos-android:0.4.0-preview.2`, with the matching core included transitively. Use Gradle repository metadata rather than adding a standalone AAR without its dependencies.
+Maven coordinates: `io.onairos:onairos-android:0.4.0-preview.3`, with the matching core included transitively. Use Gradle repository metadata rather than adding a standalone AAR without its dependencies.

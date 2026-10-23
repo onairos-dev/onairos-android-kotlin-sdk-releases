@@ -1,0 +1,153 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.onairos",
+    "module": "onairos-android",
+    "version": "0.4.0-preview.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.onairos",
+          "module": "onairos-kotlin",
+          "version": {
+            "requires": "0.4.0-preview.3"
+          }
+        },
+        {
+          "group": "androidx.biometric",
+          "module": "biometric",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "onairos-android-0.4.0-preview.3.aar",
+          "url": "onairos-android-0.4.0-preview.3.aar",
+          "size": 2241760,
+          "sha512": "0987dc27d61f5dfd7a92e2cb2aa3c93014a1dec26ac02fe844438a6c95efffb3e08d17cb7dcedc81f1f9d38ef8fdeecd0e44c3aa89df39e7f48c2aa70cce23e2",
+          "sha256": "7c71738ee438b93ec97aebdc7197b0dabad5833d72ee2b354c309d43f383c6e5",
+          "sha1": "5b264034c593d42fa2106f3ff04fa37f3a4bf84e",
+          "md5": "fa62fd84bfcbfc2daaf27865b4615833"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.airbnb.android",
+          "module": "lottie",
+          "version": {
+            "requires": "6.7.1"
+          }
+        },
+        {
+          "group": "androidx.activity",
+          "module": "activity-ktx",
+          "version": {
+            "requires": "1.10.1"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.8.7"
+          }
+        },
+        {
+          "group": "androidx.webkit",
+          "module": "webkit",
+          "version": {
+            "requires": "1.12.1"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.12.0"
+          }
+        },
+        {
+          "group": "com.tiktok.open.sdk",
+          "module": "tiktok-open-sdk-auth",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "com.tiktok.open.sdk",
+          "module": "tiktok-open-sdk-core",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "io.onairos",
+          "module": "onairos-kotlin",
+          "version": {
+            "requires": "0.4.0-preview.3"
+          }
+        },
+        {
+          "group": "androidx.biometric",
+          "module": "biometric",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "onairos-android-0.4.0-preview.3.aar",
+          "url": "onairos-android-0.4.0-preview.3.aar",
+          "size": 2241760,
+          "sha512": "0987dc27d61f5dfd7a92e2cb2aa3c93014a1dec26ac02fe844438a6c95efffb3e08d17cb7dcedc81f1f9d38ef8fdeecd0e44c3aa89df39e7f48c2aa70cce23e2",
+          "sha256": "7c71738ee438b93ec97aebdc7197b0dabad5833d72ee2b354c309d43f383c6e5",
+          "sha1": "5b264034c593d42fa2106f3ff04fa37f3a4bf84e",
+          "md5": "fa62fd84bfcbfc2daaf27865b4615833"
+        }
+      ]
+    }
+  ]
+}
